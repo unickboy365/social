@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Posts</h1>
+    <a href="/upload">Upload New File</a>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <strong>{{ post[1] }}</strong>: {{ post[3] }} <br>
+            <a href="/download/{{ post[2] | basename }}">Download File</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
